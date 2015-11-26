@@ -88,8 +88,3 @@ ENV TERM xterm
 
 # revv
 CMD ./start.sh
-
-
-
-
-
