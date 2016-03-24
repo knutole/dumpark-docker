@@ -3,7 +3,12 @@
 # start redis
 redis-server /home/timo/config/redis.conf &
 
-# start wwf-server
+# enter directory
 cd /home/timo/server/
-nodemon wwf-server.js 
-# forever wwf-server.js 	# use forever instead of nodemon for production (never goes down)
+
+# install node modules
+npm install
+
+# start wwf-server
+# nodemon wwf-server.js # use nodemon for debug (will restart on code-changes) 
+forever wwf-server.js 	# use forever instead of nodemon for production (never goes down)
