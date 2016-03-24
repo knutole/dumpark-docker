@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# build docker container
-docker build -t timo/wwf .
+# create ssl folder if not exists
+mkdir -p ssl
 
-# timo/wwf is a given name, could be anything, but must match in run.sh
+# build docker container (timo/wwf name could be anything, but must be matched in run.sh)
+docker build -t timo/wwf .

@@ -8,7 +8,6 @@ FROM knutole/dumpark-base
 # create folders
 RUN mkdir -p /home/timo 
 RUN mkdir -p /data
-RUN mkdir -p ssl
 
 # copy code
 ADD ./server/ /home/timo/server/
