@@ -17,10 +17,11 @@ ADD ssl/ /home/ssl
 
 # copy scripts, configs
 ADD ./config/ /home/timo/config/
-ADD ./start.sh /home/timo/
+ADD ./docker-entrypoint.sh /home/timo/
+RUN chmod +x /home/timo/docker-entrypoint.sh
 
 # default dir
 WORKDIR /home/timo/
 
 # revv
-CMD ./start.sh
+CMD ./docker-entrypoint.sh
