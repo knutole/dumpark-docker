@@ -7,3 +7,4 @@
 
 5. Actually, if you want to use HTTPS, you need to add SSL certs for your server in a `ssl/` folder in root directory of repo, to match this ADD path in [Dockerfile](https://github.com/knutole/dumpark-docker/blob/master/Dockerfile#L68). Must match these names in [wwf-server.js](https://github.com/knutole/dumpark-docker/blob/master/server/wwf-server.js#L47).
 
+6. For permanent storage, run `./create_storage_container.sh` to create a storage volume, and start container with --volumes-from flag (see run.sh).
