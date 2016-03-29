@@ -70,7 +70,7 @@ module.exports = handler = {
 			var data = handler.parse(json);
 			var url = data.state.print_url;
 			var outFile = 'screenshot-' + map_id;
-			var outPath = 'data/' + outFile;
+			var outPath = '/data/' + outFile;
 
 			// set phantomjs options
 			var phantomOptions = {
@@ -120,7 +120,7 @@ module.exports = handler = {
 		if (!file_id) return res.end('Something went wrong. Check your url, or try to make another screenshot!')
 
 		// find file
-		glob('data/' + file_id + '*', function (err, files) {
+		glob('/data/' + file_id + '*', function (err, files) {
 
 			// get file
 			var filepath = files[0];
