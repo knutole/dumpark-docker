@@ -1,6 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var https = require('https');
+var http = require('http');
 var bodyParser = require('body-parser');
 
 // our handlers
@@ -49,6 +50,10 @@ var options = {
 };
 
 // start server
+var server_test = http.createServer(app).listen(port, function(){
+	console.log("Express server listening on port " + port);
+});
+
 var server = https.createServer(options, app).listen(port, function(){
 	console.log("Express server listening on port " + port);
 });
